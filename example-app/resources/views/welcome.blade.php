@@ -14,17 +14,17 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <script type="text/javascript" charset="utf8"
             src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" charset="utf8"
-            src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+            src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8"
@@ -306,7 +306,6 @@
         }
     </style>
 
-
 </head>
 <body class="antialiased">
 <div class="container-xl">
@@ -315,11 +314,11 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Manage <b>Employees</b></h2>
+                        <h2>Manage <b>People</b></h2>
                     </div>
                 </div>
             </div>
-            <table id="#myTable" class="table table-striped table-hover">
+            <table id="#PeopleTable" class="table table-striped table-hover">
                 <thead>
                 <tr>
                     <th>Number</th>
@@ -358,8 +357,9 @@
 </div>
 </body>
 <script>
-    $(document).ready( function () {
-        $('#myTable').DataTable();
-    } );
+    $(document).ready(function () {
+        $("#PeopleTable").DataTable();
+    });
 </script>
+
 </html>

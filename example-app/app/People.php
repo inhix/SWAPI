@@ -1,7 +1,9 @@
 <?php
+
 namespace App;
 
-class People {
+class People
+{
 
     public $name;
     public $height;
@@ -24,5 +26,22 @@ class People {
 
     }
 
+    public static function getAllPeople()
+    {
+        $responce = new SWAPIPeopleResponse('https://swapi.dev/api/people/');
+
+        while ($responce->next !== null):
+            foreach ($responce->results as $human)
+                $allHumans [] = $human;
+            $responce = new SWAPIPeopleResponse($responce->next);
+        endwhile;
+
+        if ($responce->next === null) {
+            foreach ($responce->results as $human)
+                $allHumans [] = $human;
+        }
+
+        return $allHumans;
+    }
 
 }
